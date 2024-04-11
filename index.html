@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2進数タイマー</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title" id="$title">2進数タイマー</div>
+    <div class="screen" id="$screen">
+      <div class="block">
+        <div class="digit" id="$minutes"></div>
+        <div class="char">分</div>
+      </div>
+      <div class="block">
+        <div class="digit" id="$seconds"></div>
+        <div class="char">秒</div>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="upper">
+        <input type="button" value="10分" id="$plus10m">
+        <input type="button" value="1分" id="$plus1m">
+        <input type="button" value="10秒" id="$plus10s">
+      </div>
+      <div class="lower">
+        <input type="button" value="リセット" id="$reset">
+        <input type="button" value="スタート" id="$start">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

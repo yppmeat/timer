@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Digital Number";
+  src: url(digital-number.ttf);
+}
+@font-face {
+  font-family: "GenJyuu Gothic";
+  src: url(GenJyuuGothic-Medium.ttf);
+}
+html {
+  font-family: "GenJyuu Gothic";
+  font-size: min(1vw, 1vh);
+  --accent-color: #0099ff;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.wrapper {
+  background-color: var(--accent-color);
+  width: 90rem;
+  height: 80rem;
+  border-radius: 10rem;
+  padding: 8rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0.8rem 0.6rem #969696;
+}
+
+.title {
+  font-weight: bold;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.screen {
+  background-color: #dfe2d0;
+  width: 100%;
+  height: 40%;
+  border-radius: 2rem;
+  margin-bottom: 8rem;
+  flex-shrink: 0;
+  font-family: "Digital Number";
+  font-size: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+.screen.digit2 .block .digit {
+  font-size: 27rem;
+}
+.screen.digit2 .block .digit span {
+  width: 14rem;
+}
+.screen.digit2 .block .char {
+  padding: 4rem 0;
+}
+.screen.digit3 .block .digit {
+  font-size: 18rem;
+}
+.screen.digit3 .block .digit span {
+  width: 9.5rem;
+}
+.screen.digit3 .block .char {
+  padding: 2rem 0;
+}
+.screen.digit4- {
+  flex-direction: column;
+}
+.screen.digit4- .block:first-child {
+  right: 5rem;
+}
+.screen.digit4- .block:last-child {
+  left: 5rem;
+}
+.screen.digit4- .block .digit {
+  font-size: 12rem;
+}
+.screen.digit4- .block .digit span {
+  width: 6.5rem;
+}
+.screen.digit4- .block .char {
+  font-size: 4rem;
+  margin-left: 1rem;
+  padding: 1rem 0;
+}
+.screen .block {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.screen .block .digit, .screen .block .char {
+  text-shadow: 1px 1px 4px grey;
+}
+.screen .block .digit {
+  display: flex;
+}
+.screen .block .digit span {
+  text-align: right;
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  height: 100%;
+}
+.buttons > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+.buttons input {
+  background-color: #f7f7f9;
+  font-size: 5rem;
+  outline: none;
+  font-family: "GenJyuu Gothic";
+  padding: 1.5rem 4rem;
+  border: 0.2rem solid grey;
+  border-radius: calc(infinity * 1rem);
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 0.4rem 0.2rem #626262;
+}
+.buttons input:active {
+  transform: translate(0.4rem, 0.4rem);
+  box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem #626262 inset;
+}/*# sourceMappingURL=style.css.map */
