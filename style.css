@@ -12,10 +12,10 @@
 }
 html {
   font-family: "GenJyuu Gothic";
-  font-size: min(1vw, 1vh);
+  font-size: min(1dvw, 1dvh);
   --accent-color: #0099ff;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
 }
 
 body {
@@ -52,6 +52,73 @@ body {
   flex-shrink: 0;
 }
 
+.background {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2.5rem;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s opacity;
+}
+.background:has(.show) {
+  opacity: 1;
+  pointer-events: all;
+}
+.background .select {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 7rem;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.background .select label {
+  height: 17.5rem;
+  border-bottom: 0.2rem solid #d0d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 5rem;
+  font-family: initial;
+  padding: 0 4rem;
+  flex-shrink: 0;
+  transition: 0.1s background-color;
+}
+.background .select label:active {
+  background-color: #e6e6e6;
+}
+.background .select label input {
+  width: 4.5rem;
+  height: 4.5rem;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+@media (min-width: 600px) {
+  .background .select {
+    width: 60rem;
+    min-width: calc(600px - 5rem);
+  }
+  .background .select label {
+    height: 9.5rem;
+    min-height: 70px;
+    font-size: max(2.5rem, 20px);
+  }
+  .background .select label input {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
 .screen {
   background-color: #dfe2d0;
   width: 100%;
@@ -65,6 +132,9 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 2rem 2rem;
+}
+.screen.hide .block {
+  opacity: 0;
 }
 .screen.digit2 .block .digit {
   font-size: 27rem;
@@ -132,6 +202,9 @@ body {
   padding: 0 3rem;
 }
 .buttons input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: #f7f7f9;
   font-size: 5rem;
   outline: none;
